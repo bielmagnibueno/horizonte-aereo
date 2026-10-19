@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Site interativo sobre o KC-390 Millennium, A-29 Super Tucano, Praetor 500 e Praetor 600."
+    >
+
+    <meta
+        name="keywords"
+        content="aviação, aeronaves, KC-390, Super Tucano, Praetor 500, Praetor 600"
+    >
+
+    <title>Horizonte Aéreo | Explore a Aviação</title>
+
+    <!-- Ícones do Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Arquivo de estilos -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Arquivo JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ============================
+         FUNDO INTERATIVO
+    ============================= -->
+
+    <div class="interactive-background" aria-hidden="true">
+
+        <div class="background-grid"></div>
+
+        <i class="fa-solid fa-cloud cloud cloud-one"></i>
+        <i class="fa-solid fa-cloud cloud cloud-two"></i>
+        <i class="fa-solid fa-cloud cloud cloud-three"></i>
+
+        <i class="fa-solid fa-plane flying-object plane-one"></i>
+
+        <i
+            class="fa-solid fa-jet-fighter-up flying-object plane-two"
+        ></i>
+
+        <div id="dynamic-objects"></div>
+
+    </div>
+
+
+    <!-- ============================
+         CABEÇALHO
+    ============================= -->
+
+    <header class="main-header">
+
+        <nav
+            class="navbar container"
+            aria-label="Navegação principal"
+        >
+
+            <a
+                class="logo"
+                href="#inicio"
+                aria-label="Horizonte Aéreo, voltar ao início"
+            >
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-plane-up"></i>
+                </span>
+
+                <span class="logo-text">
+                    Horizonte
+                    <strong>Aéreo</strong>
+                </span>
+
+            </a>
+
+
+            <button
+                class="menu-button"
+                id="menu-button"
+                type="button"
+                aria-label="Abrir menu de navegação"
+                aria-expanded="false"
+                aria-controls="navigation-menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <ul
+                class="navigation-menu"
+                id="navigation-menu"
+            >
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+
+                <li>
+                    <a href="#aeronaves">Aeronaves</a>
+                </li>
+
+                <li>
+                    <a href="#curiosidades">Curiosidades</a>
+                </li>
+
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+            </ul>
+
+
+            <a class="nav-action" href="#aeronaves">
+                Explorar
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ============================
+         CONTEÚDO PRINCIPAL
+    ============================= -->
+
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+
+        <section class="hero-section" id="inicio">
+
+            <div class="hero-content container">
+
+                <div class="hero-text">
+
+                    <div class="hero-tag">
+
+                        <span class="tag-indicator"></span>
+
+                        Tecnologia brasileira nos ares
+
+                    </div>
+
+
+                    <h1>
+                        Explore o mundo da
+                        <span>aviação</span>
+                    </h1>
+
+
+                    <p>
+                        Conheça aeronaves que representam inovação,
+                        desempenho e engenharia. Selecione um modelo
+                        e descubra informações e curiosidades.
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a
+                            class="button button-primary"
+                            href="#aeronaves"
+                        >
+                            Conhecer aeronaves
+
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+
+                        <button
+                            class="button button-secondary"
+                            id="random-curiosity-button"
+                            type="button"
+                        >
+                            <i class="fa-solid fa-shuffle"></i>
+
+                            Curiosidade aleatória
+                        </button>
+
+                    </div>
+
+
+                    <div class="hero-statistics">
+
+                        <div class="statistic">
+                            <strong>04</strong>
+                            <span>Aeronaves</span>
+                        </div>
+
+                        <div class="statistic">
+                            <strong>12+</strong>
+                            <span>Curiosidades</span>
+                        </div>
+
+                        <div class="statistic">
+                            <strong>100%</strong>
+                            <span>Interativo</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="hero-visual"
+                    aria-hidden="true"
+                >
+
+                    <div class="hero-circle circle-one"></div>
+                    <div class="hero-circle circle-two"></div>
+
+
+                    <div class="radar">
+
+                        <div class="radar-line"></div>
+                        <div class="radar-center"></div>
+
+                        <span class="radar-point point-one"></span>
+                        <span class="radar-point point-two"></span>
+                        <span class="radar-point point-three"></span>
+
+                    </div>
+
+
+                    <div class="hero-plane">
+                        <i class="fa-solid fa-plane"></i>
+                    </div>
+
+
+                    <div class="floating-information info-altitude">
+
+                        <i class="fa-solid fa-arrow-up"></i>
+
+                        <div>
+                            <span>Explorando</span>
+                            <strong>Novos horizontes</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-information info-location">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <div>
+                            <span>Origem</span>
+                            <strong>Brasil</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                class="scroll-indicator"
+                href="#aeronaves"
+            >
+                <span>Role para explorar</span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+        </section>
+
+
+        <!-- ============================
+             SEÇÃO DE AERONAVES
+        ============================= -->
+
+        <section
+            class="aircraft-section"
+            id="aeronaves"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+
+                        <i class="fa-solid fa-plane-departure"></i>
+
+                        Nossa seleção
+
+                    </div>
+
+                    <h2>Aeronaves em destaque</h2>
+
+                    <p>
+                        Clique no botão de cada aeronave para conhecer
+                        características, aplicações e curiosidades.
+                    </p>
+
+                </div>
+
+
+                <div class="aircraft-grid">
+
+                    <!-- KC-390 MILLENNIUM -->
+
+                    <article class="aircraft-card kc390-card">
+
+                        <div class="card-number">01</div>
+
+
+                        <div class="aircraft-image aircraft-kc390">
+
+                            <div class="image-overlay"></div>
+
+                            <span
+                                class="aircraft-category military-category"
+                            >
+                                <i class="fa-solid fa-shield-halved"></i>
+
+                                Defesa
+                            </span>
+
+                            <i
+                                class="fa-solid fa-plane aircraft-placeholder-icon"
+                                aria-hidden="true"
+                            ></i>
+
+                        </div>
+
+
+                        <div class="aircraft-content">
+
+                            <div class="aircraft-title">
+
+                                <div>
+                                    <span>
+                                        Transporte multimissão
+                                    </span>
+
+                                    <h3>KC-390 Millennium</h3>
+                                </div>
+
+                                <i
+                                    class="fa-solid fa-plane-circle-check"
+                                ></i>
+
+                            </div>
+
+
+                            <p>
+                                Aeronave militar desenvolvida para
+                                transporte, mobilidade e diferentes
+                                operações estratégicas.
+                            </p>
+
+
+                            <div class="aircraft-features">
+
+                                <span>
+                                    <i class="fa-solid fa-box"></i>
+
+                                    Transporte
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-gas-pump"></i>
+
+                                    Reabastecimento
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-kit-medical"></i>
+
+                                    Evacuação
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                class="aircraft-button"
+                                type="button"
+                                data-aircraft="kc390"
+                                aria-label="Ver curiosidades do KC-390 Millennium"
+                            >
+                                Ver curiosidades
+
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- A-29 SUPER TUCANO -->
+
+                    <article class="aircraft-card super-tucano-card">
+
+                        <div class="card-number">02</div>
+
+
+                        <div
+                            class="aircraft-image aircraft-super-tucano"
+                        >
+
+                            <div class="image-overlay"></div>
+
+                            <span
+                                class="aircraft-category military-category"
+                            >
+                                <i class="fa-solid fa-shield-halved"></i>
+
+                                Defesa
+                            </span>
+
+                            <i
+                                class="fa-solid fa-jet-fighter-up aircraft-placeholder-icon"
+                                aria-hidden="true"
+                            ></i>
+
+                        </div>
+
+
+                        <div class="aircraft-content">
+
+                            <div class="aircraft-title">
+
+                                <div>
+                                    <span>Turboélice militar</span>
+
+                                    <h3>A-29 Super Tucano</h3>
+                                </div>
+
+                                <i class="fa-solid fa-crosshairs"></i>
+
+                            </div>
+
+
+                            <p>
+                                Aeronave versátil utilizada em
+                                treinamento avançado e diferentes
+                                missões operacionais.
+                            </p>
+
+
+                            <div class="aircraft-features">
+
+                                <span>
+                                    <i
+                                        class="fa-solid fa-graduation-cap"
+                                    ></i>
+
+                                    Treinamento
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-eye"></i>
+
+                                    Vigilância
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-gauge-high"></i>
+
+                                    Agilidade
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                class="aircraft-button"
+                                type="button"
+                                data-aircraft="super-tucano"
+                                aria-label="Ver curiosidades do A-29 Super Tucano"
+                            >
+                                Ver curiosidades
+
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRAETOR 500 -->
+
+                    <article class="aircraft-card praetor-500-card">
+
+                        <div class="card-number">03</div>
+
+
+                        <div
+                            class="aircraft-image aircraft-praetor-500"
+                        >
+
+                            <div class="image-overlay"></div>
+
+                            <span
+                                class="aircraft-category executive-category"
+                            >
+                                <i class="fa-solid fa-briefcase"></i>
+
+                                Executivo
+                            </span>
+
+                            <i
+                                class="fa-solid fa-plane-departure aircraft-placeholder-icon"
+                                aria-hidden="true"
+                            ></i>
+
+                        </div>
+
+
+                        <div class="aircraft-content">
+
+                            <div class="aircraft-title">
+
+                                <div>
+                                    <span>Jato executivo</span>
+
+                                    <h3>Praetor 500</h3>
+                                </div>
+
+                                <i class="fa-solid fa-gem"></i>
+
+                            </div>
+
+
+                            <p>
+                                Jato executivo projetado para combinar
+                                alcance, tecnologia, conforto e eficiência.
+                            </p>
+
+
+                            <div class="aircraft-features">
+
+                                <span>
+                                    <i class="fa-solid fa-couch"></i>
+
+                                    Conforto
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-wifi"></i>
+
+                                    Conectividade
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-route"></i>
+
+                                    Alcance
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                class="aircraft-button"
+                                type="button"
+                                data-aircraft="praetor-500"
+                                aria-label="Ver curiosidades do Praetor 500"
+                            >
+                                Ver curiosidades
+
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRAETOR 600 -->
+
+                    <article class="aircraft-card praetor-600-card">
+
+                        <div class="card-number">04</div>
+
+
+                        <div
+                            class="aircraft-image aircraft-praetor-600"
+                        >
+
+                            <div class="image-overlay"></div>
+
+                            <span
+                                class="aircraft-category executive-category"
+                            >
+                                <i class="fa-solid fa-briefcase"></i>
+
+                                Executivo
+                            </span>
+
+                            <i
+                                class="fa-solid fa-plane-up aircraft-placeholder-icon"
+       
+                                <i class="fa-solid fa-star"></i>
+
+                            </div>
+                            
+
+                            <p>
+                                Aeronave executiva desenvolvida para
+                                realizar viagens de longa distância
+                                com alto conforto.
+                            </p>
+
+
+                            <div class="aircraft-features">
+
+                                <span>
+                                    <i
+                                        class="fa-solid fa-earth-americas"
+                                    ></i>
+
+                                    Longa distância
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-laptop"></i>
+
+                                    Tecnologia
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-chair"></i>
+
+                                    Comodidade
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                class="aircraft-button"
+                                type="button"
+                                data-aircraft="praetor-600"
+                                aria-label="Ver curiosidades do Praetor 600"
+                            >
+                                Ver curiosidades
+
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================
+             CURIOSIDADES GERAIS
+        ============================= -->
+
+        <section
+            class="curiosity-section"
+            id="curiosidades"
+        >
+
+            <div class="container">
+
+                <div class="curiosity-panel">
+
+                    <div class="curiosity-decoration">
+                        <i class="fa-regular fa-lightbulb"></i>
+                    </div>
+
+
+                    <div class="curiosity-content">
+
+                        <span class="section-label">
+                            Você sabia?
+                        </span>
+
+                        <h2>
+                            Existe sempre algo novo para descobrir
+                        </h2>
+
+                        <p id="general-curiosity-text">
+                            A aviação reúne engenharia, tecnologia,
+                            aerodinâmica e precisão. Use o botão para
+                            receber uma curiosidade diferente.
+                        </p>
+
+                        <button
+                            class="button button-primary"
+                            id="new-curiosity-button"
+                            type="button"
+                        >
+                            <i
+                                class="fa-solid fa-wand-magic-sparkles"
+                            ></i>
+
+                            Mostrar outra curiosidade
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="curiosity-visual"
+                        aria-hidden="true"
+                    >
+
+                        <div class="orbit orbit-one"></div>
+                        <div class="orbit orbit-two"></div>
+
+                        <div class="curiosity-plane-icon">
+                            <i class="fa-solid fa-plane-up"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================
+             SOBRE O PROJETO
+        ============================= -->
+
+        <section
+            class="about-section"
+            id="sobre"
+        >
+
+            <div class="container about-container">
+
+                <div
+                    class="about-visual"
+                    aria-hidden="true"
+                >
+
+                    <div class="about-card main-about-card">
+
+                        <div class="about-card-header">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+
+                        <div class="flight-path">
+
+                            <i
+                                class="fa-solid fa-location-dot start-location"
+                            ></i>
+
+                            <div class="dotted-path"></div>
+
+                            <i
+                                class="fa-solid fa-plane path-plane"
+                            ></i>
+
+                            <i
+                                class="fa-solid fa-location-dot end-location"
+                            ></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="small-about-card">
+
+                        <i class="fa-solid fa-globe"></i>
+
+                        <div>
+                            <strong>Explore</strong>
+
+                            <span>
+                                O universo da aviação
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <div class="section-label">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        Sobre o projeto
+
+                    </div>
+
+
+                    <h2>
+                        Informação apresentada de uma forma
+                        <span>mais interessante</span>
+                    </h2>
+
+
+                    <p>
+                        O Horizonte Aéreo foi pensado como uma
+                        experiência digital sobre aviação. A página
+                        combina conteúdo, movimento e interatividade
+                        para apresentar aeronaves de maneira moderna
+                        e acessível.
+                    </p>
+
+
+                    <ul class="about-list">
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <div>
+                                <strong>
+                                    Conteúdo organizado
+                                </strong>
+
+                                <span>
+                                    Informações separadas por aeronave.
+                                </span>
+                            </div>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <div>
+                                <strong>
+                                    Experiência interativa
+                                </strong>
+
+                                <span>
+                                    Botões, animações e elementos
+                                    em movimento.
+                                </span>
+                            </div>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <div>
+                                <strong>
+                                    Design responsivo
+                                </strong>
+
+                                <span>
+                                    Estrutura preparada para computador
+                                    e celular.
+                                </span>
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ============================
+         JANELA DE CURIOSIDADES
+    ============================= -->
+
+    <div
+        class="modal-overlay"
+        id="aircraft-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-aircraft-name"
+        aria-hidden="true"
+    >
+
+        <div class="modal-container">
+
+            <button
+                class="modal-close-button"
+                id="modal-close-button"
+                type="button"
+                aria-label="Fechar janela de curiosidades"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+
+            <div class="modal-header">
+
+                <div
+                    class="modal-aircraft-icon"
+                    id="modal-aircraft-icon"
+                >
+                    <i class="fa-solid fa-plane"></i>
+                </div>
+
+                <div>
+                    <span id="modal-aircraft-category">
+                        Categoria
+                    </span>
+
+                    <h2 id="modal-aircraft-name">
+                        Nome da aeronave
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <div class="modal-highlight">
+
+                    <i class="fa-regular fa-lightbulb"></i>
+
+                    <div>
+                        <span>
+                            Curiosidade em destaque
+                        </span>
+
+                        <p id="modal-main-curiosity">
+                            A curiosidade da aeronave aparecerá aqui.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="modal-information-grid">
+
+                    <div class="modal-information-item">
+
+                        <i class="fa-solid fa-building"></i>
+
+                        <div>
+                            <span>Fabricante</span>
+
+                            <strong id="modal-manufacturer">
+                                Embraer
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="modal-information-item">
+
+                        <i class="fa-solid fa-plane-departure"></i>
+
+                        <div>
+                            <span>Tipo</span>
+
+                            <strong id="modal-type">
+                                Aeronave
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="modal-information-item">
+
+                        <i class="fa-solid fa-gears"></i>
+
+                        <div>
+                            <span>
+                                Principal aplicação
+                            </span>
+
+                            <strong id="modal-application">
+                                Aviação
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="modal-extra-curiosities">
+
+                    <h3>Mais informações</h3>
+
+                    <ul id="modal-curiosity-list">
+                        <!-- O JavaScript adicionará os itens aqui -->
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    class="button button-secondary"
+                    id="previous-curiosity-button"
+                    type="button"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Anterior
+                </button>
+
+
+                <span id="modal-counter">
+                    1 de 4
+                </span>
+
+
+                <button
+                    class="button button-primary"
+                    id="next-curiosity-button"
+                    type="button"
+                >
+                    Próxima
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================
+         BOTÃO VOLTAR AO TOPO
+    ============================= -->
+
+    <button
+        class="back-to-top"
+        id="back-to-top"
+        type="button"
+        aria-label="Voltar ao início da página"
+    >
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+
+    <!-- ============================
+         RODAPÉ
+    ============================= -->
+
+    <footer class="main-footer">
+
+        <div class="container footer-content">
+
+            #inicio
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-plane-up"></i>
+                </span>
+
+                <span class="logo-text">
+                    Horizonte
+                    <strong>Aéreo</strong>
+                </span>
+
+            </a>
+
+
+            <p>
+                Uma experiência interativa para quem gosta de
+                aviação, tecnologia e grandes aeronaves.
+            </p>
+
+
+            <nav
+                class="footer-navigation"
+                aria-label="Navegação do rodapé"
+            >
+                #inicioInício</a>
+
+                #aeronavesAeronaves</a>
+
+                #curiosidadesCuriosidades</a>
+
+                #sobreSobre</a>
+            </nav>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    &copy;
+                    <span id="current-year">2026</span>
+
+                    Horizonte Aéreo. Projeto educacional sobre aviação.
+                </p>
+
+                <span>
+                    Desenvolvido para amantes da aviação
+
+                    <i class="fa-solid fa-plane"></i>
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
